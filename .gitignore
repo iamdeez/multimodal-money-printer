@@ -3,6 +3,17 @@
 .env.*
 !.env.example
 
+# 의존성·빌드 결과
+node_modules/
+dist/
+.slidev/
+
+# Slidev 내보내기 결과
+*.pdf
+*.pptx
+slidev-exported*/
+exports/
+
 # OS·편집기
 .DS_Store
 .vscode/
