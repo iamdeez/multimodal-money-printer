@@ -39,16 +39,43 @@
 
 과밀 회차의 분 단위 배분, 평가 증거와 루브릭, 운영 조건은 [강의 기획서](docs/course-plan.md)를 참고하세요.
 
-## 저장소 구조
+## 교안 작성 (Slidev)
 
-현재는 `docs/`만 있고, 나머지는 자료가 생기는 대로 추가할 예정입니다.
+교안은 [Slidev](https://sli.dev)로 만들고, 테마는 Apple Basic에 미니멀리즘을 덧씌워 씁니다.
+
+| 역할 | 폰트 | 쓰는 곳 |
+| --- | --- | --- |
+| 제목 | IBM Plex Sans KR | 슬라이드·섹션 제목, 표 머리글 |
+| 본문 | SUIT | 문단, 목록, 표 |
+| 코드·강조 | Nanum Gothic Coding | 코드 블록, 인용문, 강조 블록 |
+
+폰트는 npm 패키지로 번들되어 있어 외부 CDN 없이 동작합니다(교실 네트워크가 막혀 있어도 슬라이드가 열립니다).
+
+```bash
+npm install                                       # 처음 한 번
+npm run sample                                    # 샘플 슬라이드 열기
+npm run dev -- lectures/01-intro.md               # 특정 회차 열기
+npm run build -- lectures/01-intro.md             # 정적 사이트로 빌드(lectures/dist/)
+npm run export -- lectures/01-intro.md            # PDF 내보내기(playwright-chromium이 별도로 필요할 수 있음, 이 저장소에서는 아직 시험하지 않음)
+```
+
+- Node.js 20.12 이상이 필요합니다.
+- 새 회차는 `lectures/` 아래에 `NN-제목.md`로 추가합니다. 머리말(frontmatter)은 [샘플](lectures/00-sample.md)을 복사해 시작하세요(`theme`, `fonts`, `colorSchema` 포함).
+- 공통 스타일은 `lectures/styles/index.css`, 공통 컴포넌트는 `lectures/components/`에 있습니다. 강조 블록은 `<Callout title="핵심">내용</Callout>`으로 씁니다.
+- 슬라이드 파일은 `lectures/`에서 시작해야 공통 스타일과 컴포넌트가 적용됩니다. 다른 폴더에 두려면 `styles/`와 `components/`를 함께 옮겨야 합니다.
+
+## 저장소 구조
 
 ```text
 .
 ├── README.md
+├── package.json         # Slidev, 테마, 폰트 의존성과 실행 스크립트
 ├── docs/
 │   └── course-plan.md   # 강의 기획서(목적, 대상, 근거, 목표, 평가, 방법, 운영 조건, 점검)
-├── lectures/            # (예정) 회차별 교안과 슬라이드
+├── lectures/            # 회차별 교안(Slidev)
+│   ├── 00-sample.md     # 디자인 시스템 확인용 샘플
+│   ├── styles/          # 공통 스타일(폰트, 미니멀 테마 덧씌우기)
+│   └── components/      # 공통 컴포넌트(Callout 등)
 ├── labs/                # (예정) 실습 안내, 증례, 오류 해부 자료, 판정 시나리오
 ├── templates/           # (예정) 실험 설계서 양식, 루브릭, 개인 기여 기록 양식
 ├── scripts/             # (예정) 소재 일괄 측정 스크립트, 두 비율 검정 계산 시트
@@ -64,7 +91,7 @@
 
 ## 진행 상황
 
-기획서 단계입니다. 교안 작성 전에 확인할 항목(우선순위 순):
+기획서와 교안 제작 환경(Slidev)까지 준비됐고, 회차별 교안은 아직 없습니다. 교안 작성 전에 확인할 항목(우선순위 순):
 
 - [ ] Model API의 한국 가입·결제·약관, API 키 운영 방식
 - [ ] 팀별 Meta 광고 계정 개설·결제, A/B 테스트 기능 접근

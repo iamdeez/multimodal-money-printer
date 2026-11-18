@@ -1,0 +1,22 @@
+{
+  "name": "multimodal-money-printer",
+  "private": true,
+  "type": "module",
+  "description": "멀티모달 AI 그로스 마케팅 강의 교안(Slidev)",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export",
+    "sample": "slidev lectures/00-sample.md --open"
+  },
+  "engines": {
+    "node": ">=20.12.0"
+  },
+  "devDependencies": {
+    "@fontsource/ibm-plex-sans-kr": "^5.3.0",
+    "@fontsource/nanum-gothic-coding": "^5.3.0",
+    "@slidev/cli": "^53.1.0",
+    "@slidev/theme-apple-basic": "^0.25.1",
+    "@sun-typeface/suit": "^2.0.5"
+  }
+}
