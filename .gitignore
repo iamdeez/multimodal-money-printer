@@ -1,0 +1,15 @@
+# 비밀 정보
+.env
+.env.*
+!.env.example
+
+# OS·편집기
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
