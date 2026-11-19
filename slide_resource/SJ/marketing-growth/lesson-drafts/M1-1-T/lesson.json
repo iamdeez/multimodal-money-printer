@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "status": "draft",
+  "title": "M1-1-T · 광고 목표·전환 퍼널·KPI의 분모와 기간 정의",
+  "audience": "광고 용어와 스프레드시트 기초를 익힌 예비·초급 마케터 및 직무 전환자(선수지식 진단 전 가정)",
+  "durationMinutes": 180,
+  "objective": "광고 목표를 대상·기간·행동이 있는 측정 질문으로 바꾸고, R1에서 확인 가능한 퍼널 단계와 KPI의 분자·분모·원천 및 확인할 수 없는 정보를 구분한다.",
+  "assessmentEvidence": "측정 질문 1개, R1의 보유·누락 필드가 표시된 퍼널, KPI 정의 초안 2개, 관찰 구매와 광고 증분 효과를 구분한 문장 1개",
+  "sources": [
+    {
+      "id": "S1",
+      "path": "../../교과_차시_편성.md",
+      "locator": "2. 교안 목차와 자료 판단, M1-1 행",
+      "use": "M1-1의 목표와 이론 3시간·실습 1시간 분리"
+    },
+    {
+      "id": "S2",
+      "path": "../../evidence/112h-workbook/112시간_실습_워크북.md",
+      "locator": "M1-1. 광고 목표·전환 퍼널·KPI 정의",
+      "use": "목표·퍼널·KPI 정의와 R1 해석 경계의 과정 설계"
+    },
+    {
+      "id": "S3",
+      "path": "../../evidence/multimodal-assets/daily_campaign_metrics.csv",
+      "locator": "헤더와 28개 데이터 행, data_status 열",
+      "use": "날짜×캠페인 관찰 자료의 필드와 교육용 합성 자료 상태"
+    },
+    {
+      "id": "S4",
+      "path": "https://www.ncs.go.kr/unity/th03/selectKeywordSearch.do?ncsLclasCd=02&pageIndex=1&pageUseYn=Y&searchKeyword=%EB%A7%88%EC%BC%80%ED%8C%85",
+      "locator": "물리적 PDF 73쪽, 마케팅 성과 관리 0201030118_21v4 수행준거 1.1~1.2",
+      "use": "목표에 적합한 성과 지표 선정과 성과 관리 계획의 직무 근거"
+    },
+    {
+      "id": "S5",
+      "path": "https://support.google.com/analytics/answer/9267568?hl=en",
+      "locator": "What is a key event?; Report on key events, 2026-11-18 확인",
+      "use": "중요한 행동을 key event로 지정하고 보고서에서 발생 수를 확인하는 개념"
+    },
+    {
+      "id": "S6",
+      "path": "https://www.kellogg.northwestern.edu/faculty/gordon_b/files/fb_comparison.pdf",
+      "locator": "저자 원고 물리적 PDF 1쪽 초록, 42~43쪽 결론",
+      "use": "관찰 기반 광고 성과 추정과 무작위 실험 효과의 구분"
+    }
+  ],
+  "segments": [
+    {
+      "title": "사례와 측정 질문 진단",
+      "kind": "check",
+      "minutes": 15,
+      "teacher": "교육용 루미 캠페인의 '구매를 늘린다'를 보여 주고 무엇을 세어야 하는지 먼저 묻는다. 3시간 이론과 다음 1시간 실습의 경계를 안내한다.",
+      "learner": "대상·기간·행동이 빠진 부분을 표시하고 첫 측정 질문을 적는다.",
+      "check": "목표 문장에 확인할 대상·기간·행동이 모두 있는가?",
+      "sourceIds": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "title": "사업 결과와 경로 지표의 계층",
+      "kind": "explain",
+      "minutes": 25,
+      "teacher": "첫 구매·매출 같은 사업 결과와 구매 행동, 노출·클릭 같은 경로 지표를 구분한다. 보호 지표는 측정 가능 여부까지 적게 한다.",
+      "learner": "제시된 지표를 결과·행동·경로·보호 조건으로 분류하고 목표와 대리지표를 구별한다.",
+      "check": "CTR 상승만으로 첫 구매 증가를 주장하지 않는가?",
+      "sourceIds": [
+        "S2",
+        "S4"
+      ]
+    },
+    {
+      "title": "대상·기간·행동·집계 단위 정하기",
+      "kind": "explain",
+      "minutes": 25,
+      "teacher": "'14일 동안 첫 구매' 예에서 신규 고객 판정, 구매 중복, 날짜 범위를 묻고 측정 질문의 구성 요소를 시연한다.",
+      "learner": "질문에 대상·기간·행동·집계 단위를 표시하고 판정에 필요한 필드를 제안한다.",
+      "check": "R1만으로 신규 고객을 판정할 수 없다는 한계를 적었는가?",
+      "sourceIds": [
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "title": "퍼널과 R1의 관찰 범위",
+      "kind": "demo",
+      "minutes": 25,
+      "teacher": "R1 헤더와 한 행의 단위를 보여 주고 노출·클릭·구매만 원본에서 확인한다. 상품 보기·장바구니·환불은 자료 없음으로 표시한다.",
+      "learner": "퍼널 단계마다 보유 필드와 누락 필드를 구분해 표시한다.",
+      "check": "없는 단계를 0건으로 쓰지 않고 자료 없음으로 표시했는가?",
+      "sourceIds": [
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "title": "KPI의 분자·분모·기간 정의",
+      "kind": "explain",
+      "minutes": 25,
+      "teacher": "CTR·CPC·CPA·ROAS의 정의와 원천 필드를 연결한다. 전체 비율은 분자·분모 합계로 계산하며 0 분모 처리 규칙이 필요함을 설명한다. 계산값 산출은 M1-1-P와 M1-2로 넘긴다.",
+      "learner": "CTR과 CPA를 먼저 골라 정의 카드에 분자·분모·기간·원천·누락 조건을 적는다.",
+      "check": "두 지표의 분자·분모가 R1 필드에 연결되는가?",
+      "sourceIds": [
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    {
+      "title": "key event와 광고 효과의 차이",
+      "kind": "explain",
+      "minutes": 20,
+      "teacher": "GA4 key event의 발생 수·귀속 보고와 광고 때문에 추가된 구매를 분리한다. R1의 관찰 구매는 증분 효과가 아님을 사례로 설명한다.",
+      "learner": "관찰·귀속·증분이라는 세 주장 중 R1이 뒷받침하는 범위를 고른다.",
+      "check": "key event 또는 귀속 수를 인과 효과로 단정하지 않는가?",
+      "sourceIds": [
+        "S2",
+        "S3",
+        "S5",
+        "S6"
+      ]
+    },
+    {
+      "title": "측정 계획 초안 작성",
+      "kind": "practice",
+      "minutes": 25,
+      "teacher": "학생 활동지의 빈칸을 안내하고 답을 먼저 제시하지 않는다. 대상·기간·행동, 퍼널의 자료 유무, KPI 두 개와 누락 필드를 순회하며 질문으로 확인한다.",
+      "learner": "측정 질문 1개, 퍼널 표시, KPI 정의 초안 2개, 추가로 필요한 필드 목록을 작성한다.",
+      "check": "질문·퍼널·KPI가 같은 대상과 기간을 가리키며 미보유 필드가 명시됐는가?",
+      "sourceIds": [
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "title": "동료 검토와 다음 실습 인계",
+      "kind": "check",
+      "minutes": 20,
+      "teacher": "동료가 정의표만 보고 원천 필드를 찾는지 확인하게 한다. 관찰 구매와 증분 효과를 구분하는 문장을 받아 오개념을 정리하고 M1-1-P의 60분 실습 범위를 예고한다.",
+      "learner": "동료의 질문에 따라 정의 하나를 수정하고 네 가지 제출 증거를 낸다.",
+      "check": "측정 질문 1개, 퍼널, KPI 2개, 해석 경계 문장이 제출됐는가?",
+      "sourceIds": [
+        "S1",
+        "S2",
+        "S3",
+        "S6"
+      ]
+    }
+  ]
+}

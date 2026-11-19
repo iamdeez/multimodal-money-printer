@@ -1,0 +1,10 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+node_modules/
+s5-demo/dist/
+tmp/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

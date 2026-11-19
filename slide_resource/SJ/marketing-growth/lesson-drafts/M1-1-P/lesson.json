@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "status": "draft",
+  "title": "M1-1-P · 광고 목표·전환 퍼널·KPI 정의 실습",
+  "audience": "광고 지표·전환 퍼널·스프레드시트 기초가 있는 예비·초급 마케터와 직무 전환자",
+  "durationMinutes": 60,
+  "objective": "R1 합성 캠페인에서 14일 구매 목표에 맞는 측정 질문과 KPI 정의를 작성하고, 원본에 없는 퍼널 단계·신규 고객·환불 정보를 구분한다.",
+  "assessmentEvidence": "측정 질문 1개, 퍼널의 보유·누락 단계 표시, KPI의 분자·분모·기간·원천 표, 부족한 데이터 목록",
+  "sources": [
+    {
+      "id": "S1",
+      "path": "../../evidence/112h-workbook/112시간_실습_워크북.md",
+      "locator": "M1-1. 광고 목표·전환 퍼널·KPI 정의",
+      "use": "M1-1의 분석 문제, 제출 증거, 관찰·증분 구분"
+    },
+    {
+      "id": "S2",
+      "path": "../../evidence/multimodal-assets/daily_campaign_metrics.csv",
+      "locator": "헤더와 28개 데이터 행",
+      "use": "날짜·캠페인·소재·노출·클릭·비용·구매·매출 필드와 합성 자료 상태 확인"
+    },
+    {
+      "id": "S3",
+      "path": "https://www.ncs.go.kr/unity/th03/selectKeywordSearch.do?ncsLclasCd=02&pageIndex=1&pageUseYn=Y&searchKeyword=%EB%A7%88%EC%BC%80%ED%8C%85",
+      "locator": "물리적 PDF 73쪽, 마케팅 성과 관리 0201030118_21v4 수행준거 1.1~1.2",
+      "use": "마케팅 목표에 맞는 성과 지표 선정과 성과 관리 계획의 직무 근거"
+    }
+  ],
+  "segments": [
+    {
+      "title": "측정 질문 제시",
+      "kind": "explain",
+      "minutes": 5,
+      "teacher": "구매를 늘린다는 목표와 관찰된 구매 수를 구분하는 질문을 제시하고 제출 양식을 안내한다.",
+      "learner": "자신이 확인할 대상·기간·행동을 한 문장으로 적는다.",
+      "check": "측정 질문에 대상·14일 기간·구매 행동이 있는가?",
+      "sourceIds": [
+        "S1",
+        "S3"
+      ]
+    },
+    {
+      "title": "R1 필드와 퍼널 시연",
+      "kind": "demo",
+      "minutes": 10,
+      "teacher": "CSV 헤더와 가상 자료 표시를 보여 준 뒤 퍼널의 노출·클릭·구매 단계만 원본에 있음을 시연한다.",
+      "learner": "원본 행 단위와 보유·누락 단계에 표시한다.",
+      "check": "상품 보기·장바구니, 신규 고객 여부, 환불 정보가 원본에 없음을 표시했는가?",
+      "sourceIds": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "title": "KPI 정의표 작성",
+      "kind": "practice",
+      "minutes": 20,
+      "teacher": "CTR·CPC·CPA·ROAS의 정의표를 배부하고 분모·기간·원천이 빠진 칸만 질문으로 되짚는다.",
+      "learner": "각 지표의 분자·분모·기간·원천 필드·0 분모 처리·해석 한계를 작성한다.",
+      "check": "네 지표의 분자·분모가 R1 필드로 재계산 가능한가?",
+      "sourceIds": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "title": "부족한 데이터와 보호 지표",
+      "kind": "practice",
+      "minutes": 15,
+      "teacher": "신규 고객 획득 비용·환불률을 R1만으로 계산할 수 있는지 묻고 필요한 추가 필드 예를 시연한다.",
+      "learner": "R1에 없는 필드와 확보 방법, CPA·환불률을 보호 지표로 쓸 때의 확인 조건을 적는다.",
+      "check": "없는 값을 0이나 신규 구매로 임의 대체하지 않았는가?",
+      "sourceIds": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "title": "동료 재현·제출 확인",
+      "kind": "check",
+      "minutes": 10,
+      "teacher": "동료 한 명이 다른 사람의 지표 정의로 원천 필드와 계산 범위를 찾게 하고 해석 문장을 점검한다.",
+      "learner": "정의표를 교차 검토해 누락 하나를 수정하고 측정 질문·퍼널·KPI 표·부족한 데이터 목록을 제출한다.",
+      "check": "원천 필드가 추적되고 관찰 구매를 광고 증분 효과로 표현하지 않았는가?",
+      "sourceIds": [
+        "S1",
+        "S2"
+      ]
+    }
+  ]
+}

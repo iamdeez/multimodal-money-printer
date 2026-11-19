@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M1-1-T · 광고 목표·전환 퍼널·KPI 정의</title>
+  <link rel="stylesheet" href="template.css">
+  <style>
+    .source { position: absolute; bottom: 34px; left: 72px; max-width: 950px; margin: 0; color: #66746b; font-size: 14px; line-height: 1.35; }
+    .cover .source { color: #d6eee0; }
+    .slide-body .small { font-size: 22px; }
+    .slide-body .accent { color: #1f6654; font-weight: 500; }
+    .slide-body code { font: inherit; color: #1f6654; }
+  </style>
+</head>
+<body>
+  <div class="deck" id="deck">
+    <section class="slide cover" aria-label="M1-1-T 표지">
+      <div class="topic">멀티모달 AI 데이터 기반그로스 마케팅 · M1-1-T</div>
+      <h1>광고 목표와<br>측정 기준 정의</h1>
+      <div class="slide-body"><p>전환 퍼널을 읽고 KPI의 분자·분모·기간을 정한다</p></div>
+      <p class="source">이론 3시간 · 교육용 합성 캠페인 R1 · 강사 검토용 초안</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="오늘의 결과">
+      <div class="topic">수업 목표</div>
+      <h1>오늘의 결과</h1>
+      <div class="slide-body">
+        <p>광고 목표를 <span class="accent">대상·기간·행동</span>이 있는 질문으로 바꾼다.</p>
+        <p>R1으로 확인할 수 있는 단계와 부족한 자료를 구분한다.</p>
+        <p class="result">제출: 측정 질문 1개 · 퍼널 · KPI 정의 초안 2개 · 해석 문장 1개</p>
+      </div>
+      <p class="source">출처: 과정 편성표 M1-1; 112시간 워크북 M1-1</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="측정 질문의 출발점">
+      <div class="topic">도입 질문</div>
+      <h1>“구매를 늘린다”에서 빠진 것</h1>
+      <div class="slide-body">
+        <p>누구의 구매인가? 어느 기간인가? 구매를 어떻게 판정하는가?</p>
+        <p>먼저 질문을 정해야 지표와 필요한 데이터를 고를 수 있다.</p>
+        <p class="result">활동: 대상·기간·행동이 들어간 질문을 한 문장으로 쓰기</p>
+      </div>
+      <p class="source">출처: 112시간 워크북 M1-1 · 루미 교육용 사례</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="사업 결과와 경로 지표">
+      <div class="topic">목표와 지표</div>
+      <h1>사업 결과와 경로 지표</h1>
+      <div class="slide-body">
+        <p>첫 구매·매출은 결과, 노출·클릭은 그 결과에 이르는 경로다.</p>
+        <p>CTR이 높아도 첫 구매가 늘었다는 결론은 아직 낼 수 없다.</p>
+        <p class="result">확인: 지금 고른 지표는 목표인가, 중간 신호인가?</p>
+      </div>
+      <p class="source">출처: 근거 중심 학습서 1.1; NCS 마케팅 성과 관리 PDF 73쪽</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="측정 질문의 네 요소">
+      <div class="topic">측정 설계</div>
+      <h1>측정 질문의 네 요소</h1>
+      <div class="slide-body">
+        <p><span class="accent">대상</span> 누구를 · <span class="accent">기간</span> 언제 · <span class="accent">행동</span> 무엇을</p>
+        <p><span class="accent">집계 단위</span> 사용자·거래·클릭 중 무엇으로 셀지 정한다.</p>
+        <p class="result">“14일간 신규 고객의 첫 구매”를 확인하려면 어떤 필드가 필요한가?</p>
+      </div>
+      <p class="source">출처: 112시간 워크북 M1-1 · 측정 질문은 과정 설계 예시</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="R1의 행 단위">
+      <div class="topic">데이터 확인</div>
+      <h1>R1의 한 행은 날짜 × 캠페인</h1>
+      <div class="slide-body">
+        <p><code>date</code>, <code>campaign_id</code>, <code>impressions</code>, <code>clicks</code>, <code>purchases</code> 등을 담는다.</p>
+        <p>28개 행 모두 <span class="accent">교육용 합성 자료</span>다.</p>
+        <p class="result">원본의 행 단위와 필드부터 확인한다</p>
+      </div>
+      <p class="source">출처: R1 daily_campaign_metrics.csv 헤더·data_status 열</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="퍼널의 자료 유무">
+      <div class="topic">전환 퍼널</div>
+      <h1>있는 단계와 없는 단계</h1>
+      <div class="slide-body">
+        <p>R1에서 확인: <span class="accent">노출 → 클릭 → 구매</span></p>
+        <p>R1에 없음: 상품 보기 · 장바구니</p>
+        <p class="result">자료 없음은 0건이 아니다</p>
+      </div>
+      <p class="source">출처: R1 CSV 헤더; 112시간 워크북 M1-1</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="KPI 정의에 필요한 요소">
+      <div class="topic">KPI 정의</div>
+      <h1>지표 이름보다 정의가 먼저</h1>
+      <div class="slide-body">
+        <p>분자 · 분모 · 기간 · 필터 · 원천 필드를 함께 적는다.</p>
+        <p>분모가 0이면 임의로 0%나 0원으로 바꾸지 않는다.</p>
+        <p class="result">활동: CTR과 CPA의 원천 열을 찾기</p>
+      </div>
+      <p class="source">출처: 근거 중심 학습서 1.2; R1 CSV 헤더</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="네 지표의 분자와 분모">
+      <div class="topic">KPI 정의</div>
+      <h1>네 지표의 분자와 분모</h1>
+      <div class="slide-body small">
+        <p>CTR = 클릭 / 노출 · CPC = 광고비 / 클릭</p>
+        <p>CPA = 광고비 / 구매 · ROAS = 귀속 매출 / 광고비</p>
+        <p class="result">비율을 합칠 때는 일별 비율의 평균이 아닌 합계 분자 / 합계 분모</p>
+      </div>
+      <p class="source">출처: 근거 중심 학습서 1.2; 112시간 워크북 M1-1·M1-2</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="R1에서 계산할 수 없는 것">
+      <div class="topic">자료의 한계</div>
+      <h1>R1에서 계산할 수 없는 것</h1>
+      <div class="slide-body">
+        <p>신규 고객 여부·이전 구매·환불 기록이 없다.</p>
+        <p>따라서 신규 고객 획득 비용과 환불률은 R1만으로 알 수 없다.</p>
+        <p class="result">활동: 필요한 추가 필드와 확인 규칙 적기</p>
+      </div>
+      <p class="source">출처: R1 CSV 헤더; 112시간 워크북 M1-1</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="GA4 key event의 의미">
+      <div class="topic">측정과 해석</div>
+      <h1>GA4 key event의 의미</h1>
+      <div class="slide-body">
+        <p>사업에 중요한 행동의 이벤트를 key event로 지정할 수 있다.</p>
+        <p>보고된 발생 수와 접점별 귀속은 광고의 추가 효과와 다르다.</p>
+        <p class="result">확인: 무엇을 기록했는가, 무엇을 비교하지 않았는가?</p>
+      </div>
+      <p class="source">출처: Google Analytics Help, About key events, 2026-11-18 확인</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="관찰 구매와 증분 효과">
+      <div class="topic">인과 해석</div>
+      <h1>관찰 구매와 증분 효과</h1>
+      <div class="slide-body">
+        <p>R1의 구매 수는 관찰 결과다.</p>
+        <p>광고가 없었을 때와의 비교가 없어 추가 구매 효과를 알 수 없다.</p>
+        <p class="result">“구매 90건 = 광고 덕분에 90건 추가”라고 쓰지 않는다</p>
+      </div>
+      <p class="source">출처: Gordon 외 저자 원고 PDF 1·42~43쪽; R1 CSV</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="측정 계획 초안">
+      <div class="topic">개별 활동</div>
+      <h1>측정 계획 초안</h1>
+      <div class="slide-body">
+        <p>질문 1개 → 퍼널의 자료 유무 → CTR·CPA 정의 초안</p>
+        <p>원본에 없는 필드와 관찰의 한계를 따로 기록한다.</p>
+        <p class="result">25분: 학생 활동지 1~4를 채운다</p>
+      </div>
+      <p class="source">활동지: practice.md · 이론 차시의 개념 적용</p>
+      <span class="page-number"></span>
+    </section>
+
+    <section class="slide" aria-label="동료 검토와 다음 차시">
+      <div class="topic">결과 확인</div>
+      <h1>동료가 재현할 수 있는 정의인가?</h1>
+      <div class="slide-body">
+        <p>서로의 표에서 원천 열·기간·분모를 찾아본다.</p>
+        <p>관찰 구매와 광고의 추가 효과를 구분한 문장을 확인한다.</p>
+        <p class="result">다음 M1-1-P: 정의표 완성 · 이후 M1-2: 실제 지표 계산</p>
+      </div>
+      <p class="source">출처: 교과·차시 편성 M1-1~M1-2; 112시간 워크북</p>
+      <span class="page-number"></span>
+    </section>
+  </div>
+  <nav class="controls" aria-label="슬라이드 이동">
+    <button id="prev" title="이전 슬라이드">←</button>
+    <span id="counter"></span>
+    <button id="next" title="다음 슬라이드">→</button>
+  </nav>
+  <script src="template.js"></script>
+</body>
+</html>
