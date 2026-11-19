@@ -26,6 +26,12 @@ REF-031~033 요약은 [참고 자료](references/INDEX.md)에 포함했다. NCS�
 
 팀 기획서 3종은 시수와 운영 전제가 다르다. 이 저장소의 채택 과정은 **112시간 독립 과정**이며, [비교 문서](./team-agents/기획서/기획서_비교.md)의 다른 안은 검토 자료다.
 
+## SJ 에이전트 분석 기준
+
+팀원이 SJ가 구성한 에이전트를 분석하거나 다른 에이전트와 비교할 때는 이 PDF의 시스템 설계도와 11~12절을 기준으로 사용합니다. 이 문서는 KDT 자료 수집부터 Instructor Studio의 과정 설계, 교안 제작, LMS 운영까지 에이전트와 강사가 어떻게 작업하는지 설명합니다. [KDT 팀 시스템 및 에이전트 설명서](pdf/kdt-team-system-and-agents.pdf)
+
+분석할 때는 각 에이전트와 도구의 **역할과 사용 시점**, **입력과 산출물**, **강사 검토·적용·저장이 필요한 단계**를 확인하고, 판단 근거로 PDF 쪽이나 절을 남깁니다.
+
 ## 다시 실행하기
 
 - 차시 구조 검사: `node tooling/lesson-author/scripts/validate.mjs lesson-drafts/M1-1-T --with-slides`
