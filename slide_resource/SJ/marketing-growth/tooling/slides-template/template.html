@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[과정명] 슬라이드</title>
+  <link rel="stylesheet" href="template.css">
+</head>
+<body>
+  <div class="deck" id="deck">
+    <!-- 표지: 제목과 한 줄 설명을 바꿉니다. -->
+    <section class="slide cover" aria-label="[과정명] 표지">
+      <div class="topic">[STEP 번호 또는 과정 구분]</div>
+      <h1>[과정 제목 첫 줄]<br>[과정 제목 둘째 줄]</h1>
+      <div class="slide-body"><p>[과정의 핵심을 설명하는 한두 줄]</p></div>
+      <span class="page-number"></span>
+    </section>
+
+    <!-- 본문: 이 section을 복사해 슬라이드를 늘립니다. -->
+    <section class="slide" aria-label="[주제 제목]">
+      <div class="topic">[작은 주제명]</div>
+      <h1>[한눈에 읽히는 슬라이드 제목]</h1>
+      <div class="slide-body">
+        <p>[핵심 설명 한 문장]</p>
+        <p>[두 번째 설명 또는 학습 활동]</p>
+        <p class="result">[실습 결과물 또는 확인할 증거]</p>
+      </div>
+      <span class="page-number"></span>
+    </section>
+  </div>
+  <nav class="controls" aria-label="슬라이드 이동">
+    <button id="prev" title="이전 슬라이드">←</button>
+    <span id="counter"></span>
+    <button id="next" title="다음 슬라이드">→</button>
+  </nav>
+  <script src="template.js"></script>
+</body>
+</html>
